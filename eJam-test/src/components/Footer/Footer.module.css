@@ -1,12 +1,25 @@
 .container {
-  background-color: var(--color2);
-  border: 1px solide black;
   color: var(--color1);
-  padding: 24px;
+  font-family: var(--font1);
+  font-size: 1em;
+  background-color: var(--color2);
 }
 
 .ul {
+  margin: auto;
+  max-width: 1240px;
+  padding: 24px 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
 }
+.ul li {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+.ul li:nth-child(1) {
+  gap: 1em;
+}
+

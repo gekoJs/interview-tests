@@ -1,13 +1,18 @@
 import style from "./Footer.module.css";
-import Lock from "../../assets/Lock";
+import Lock from "../../assets/svg/Lock";
 
 const Footer = () => {
   return (
     <footer className={style.container}>
       <ul className={style.ul}>
-        <li>Copyright (C) 2023 | Clarifionsupport@clarifion.com</li>
         <li>
-          <Lock /> Secure 256-Bit SSLEncryption.
+          <p>Copyright (C) 2023</p>
+          <p>|</p>
+          <p>clarifionsupport@clarifion.com</p>
+        </li>
+        <li>
+          <Lock />
+          <p>Secure 256-Bit SSLEncryption.</p>
         </li>
       </ul>
     </footer>
