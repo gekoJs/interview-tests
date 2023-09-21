@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--color2);
+  border: 1px solide black;
+  color: var(--color1);
+  padding: 24px;
+}
+
+.ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
