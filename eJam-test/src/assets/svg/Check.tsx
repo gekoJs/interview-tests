@@ -1,4 +1,4 @@
-const Check = () => {
+const Check = ({ stroke }: { stroke: string }) => {
   return (
     <svg
       width="24"
@@ -13,7 +13,7 @@ const Check = () => {
             <path
               id="Vector"
               d="M1.99977 9L8.65859 16L21.9998 2"
-              stroke="white"
+              stroke={stroke}
               stroke-width="2.5"
               stroke-linecap="round"
               stroke-linejoin="round"
@@ -25,4 +25,7 @@ const Check = () => {
   );
 };
 
+Check.defaultProps = {
+  stroke: "white",
+};
 export default Check;

@@ -5,35 +5,81 @@ import Heart_outline from "../../assets/svg/Heart_outline";
 import Check_moneyBack from "../../assets/svg/Check_moneyBack";
 import McAfee from "../../assets/svg/McAfee";
 import Nonton from "../../assets/svg/Nonton";
+import { useState, useEffect } from "react";
+import ToRight from "../../assets/svg/ToRight";
+import ToLeft from "../../assets/svg/ToLeft";
 
-const Header = () => {
+const Header = ({ pageWidth }: { pageWidth: number }) => {
+  const [liToShow, setLiToShow] = useState(0);
+
+  console.log(liToShow);
+  const test = {
+    a: <ToLeft />,
+  };
+
+  const headerLi = [
+    {
+      icon: <Check_guarantee />,
+      text: "30-DAY SATISFACTION GUARANTEE",
+    },
+    {
+      icon: <Truck />,
+      text: "Free delivery on orders over $40.00",
+    },
+    {
+      icon: <Heart_outline />,
+      text: "50.000+ HAPPY CUSTOMERS",
+    },
+    {
+      icon: <Check_moneyBack />,
+      text: "100% Money Back Guarantee",
+    },
+  ];
   return (
     <ul className={style.ul}>
-      <li>
-        <Check_guarantee />
-        <p>30-DAY SATISFACTION GUARANTEE </p>
-      </li>
-      <li>
-        <Truck />
-        <p>Free delivery on orders over $40.00 </p>
-      </li>
-      <li>
-        <Heart_outline />
-        <p>50.000+ HAPPY CUSTOMERS</p>
-      </li>
-      <li>
-        <Check_moneyBack />
-        <p>100% Money Back Guarantee</p>
-      </li>
+      {pageWidth <= 930 && (
+        <button className={style.button} onClick={() => liToShow > 0 && setLiToShow(liToShow - 1)}>
+          <ToLeft />
+        </button>
+      )}
+      {headerLi.map((li, i) => {
+        if (pageWidth <= 930) {
+          if (i === liToShow) {
+            return (
+              <li key={li.text}>
+                {li.icon} <p>{li.text}</p>
+              </li>
+            );
+          }
+        } else {
+          return (
+            <li key={li.text}>
+              {li.icon} <p>{li.text}</p>
+            </li>
+          );
+        }
+      })}
+      {pageWidth <= 930 && (
+        <button className={style.button} onClick={() => liToShow < 3 && setLiToShow(liToShow + 1)}>
+          <ToRight />
+        </button>
+      )}
     </ul>
   );
 };
 
 const Nav = () => {
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setPageWidth(window.innerWidth);
+    });
+  }, []);
   return (
     <nav className={style.container}>
       <div className={style.ulWrapper}>
-        <Header />
+        <Header pageWidth={pageWidth} />
       </div>
 
       <div className={style.logoWrapper}>

@@ -3,6 +3,7 @@
   font-family: var(--font1);
   font-size: 1em;
   background-color: var(--color2);
+  padding: 0 1em;
 }
 
 .ul {
@@ -11,6 +12,7 @@
   padding: 24px 0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
 }
@@ -22,4 +24,3 @@
 .ul li:nth-child(1) {
   gap: 1em;
 }
-

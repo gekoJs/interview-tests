@@ -1,4 +1,66 @@
-.checkMark{
-    width: 40px;
-    height: 40px;
+.container {
+  font-family: var(--font1);
+  padding: 1em;
+}
+.wrapper {
+  max-width: 1240px;
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.header h3 {
+  font-size: 3em;
+  font-weight: 400;
+}
+.header p {
+  font-size: 1.5em;
+}
+
+.checkMark {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.checkMark_done {
+    background-color: var(--color3);
+}
+.checkMark_selected {
+    color: var(--color1);
+    background: var(--color4);
+}
+.checkMark_left {
+    color: var(--color4);
+    border: 2px solid var(--color4);
+}
+
+.ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 3.75em;
+}
+.ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}
+
+@media screen and (max-width: 715px) {
+  .ul{
+    margin-top: 2em;
+  }
+  .ul li{
+    flex-direction: column;
+  }
+  .header{
+    text-align: center;
+  }
 }

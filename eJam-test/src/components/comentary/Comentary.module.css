@@ -1,0 +1,34 @@
+.container {
+  background: var(--color1);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1.4em;
+  border-radius: 1em;
+}
+.user_description {
+  display: flex;
+  gap: 0.8em;
+}
+.user_description img {
+  width: 3em;
+  height: 3em;
+}
+.nameWrapper {
+  display: flex;
+  gap: 0.4em;
+  align-items: center;
+}
+.nameWrapper p {
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #4d5254;
+}
+.nameWrapper span {
+  color: #5bb59a;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+.rating {
+  display: flex;
+}
