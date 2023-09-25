@@ -10,11 +10,22 @@
   --color1: #ffffff;
   --color2: #252f3d;
   --color3: #85bf55;
-  --color4: #2C7EF8;
-  --color5: #F82C2C;
-  --color6: #E3EEFF;
-  --color7: #37465A;
+  --color4: #2c7ef8;
+  --color5: #f82c2c;
+  --color6: #e3eeff;
+  --color7: #37465a;
   --color8: #969696;
-  --color9: #EDF3FD;
+  --color9: #edf3fd;
   --font1: "Manrope";
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 380px) {
+  body {
+    font-size: 12px;
+  }
 }
