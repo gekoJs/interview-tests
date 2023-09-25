@@ -30,6 +30,8 @@ const Header = ({ pageWidth }: { pageWidth: number }) => {
       text: "100% Money Back Guarantee",
     },
   ];
+
+  
   return (
     <ul className={style.ul}>
       {pageWidth <= 930 && (
