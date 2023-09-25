@@ -12,11 +12,6 @@ import ToLeft from "../../assets/svg/ToLeft";
 const Header = ({ pageWidth }: { pageWidth: number }) => {
   const [liToShow, setLiToShow] = useState(0);
 
-  console.log(liToShow);
-  const test = {
-    a: <ToLeft />,
-  };
-
   const headerLi = [
     {
       icon: <Check_guarantee />,
@@ -38,7 +33,10 @@ const Header = ({ pageWidth }: { pageWidth: number }) => {
   return (
     <ul className={style.ul}>
       {pageWidth <= 930 && (
-        <button className={style.button} onClick={() => liToShow > 0 && setLiToShow(liToShow - 1)}>
+        <button
+          className={style.button}
+          onClick={() => liToShow > 0 && setLiToShow(liToShow - 1)}
+        >
           <ToLeft />
         </button>
       )}
@@ -60,7 +58,10 @@ const Header = ({ pageWidth }: { pageWidth: number }) => {
         }
       })}
       {pageWidth <= 930 && (
-        <button className={style.button} onClick={() => liToShow < 3 && setLiToShow(liToShow + 1)}>
+        <button
+          className={style.button}
+          onClick={() => liToShow < 3 && setLiToShow(liToShow + 1)}
+        >
           <ToRight />
         </button>
       )}
